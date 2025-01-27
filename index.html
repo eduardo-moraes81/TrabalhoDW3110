@@ -1,21 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalho DevWeb</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Portfolio</a>
-            <a href="">Orçamento</a>
-            <a href="">Comentários</a>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto - CinéMetré</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./imagens/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./index.html"><img src="./imagens/CineMetre250Atualizado.png" alt="logoCinéMetré" />
+      <nav class="nav-bar"></a>
+        <ul>
+          <li><a href="#" id="botaoLogin">Login</a></li>
+          <li><a href="#" id="botaoCriarConta">Criar Conta</a></li>
+          <li><p id="mensagemBoasVindas"></p></li>
+        </ul>
+      </nav>
     </header>
 
+    <main>
+      <section class="section-1">
+        <img src="./imagens/CineMetre250Atualizado.png" alt="" />
+        <h3>
+          Olá! Seja bem vindo ao CinéMetré. <br />
+          Salve, classifique e compartilhe seus filmes!
+        </h3>
+      </section>
+
+      <section class="section-2">
+        <h2>Os filmes mais assistidos de 2024:</h2>
+        <div class="cards-wrapper">
+          <div class="card">
+            <img src="./imagens/Assassinos da Lua das Flores.jpg" alt="" />
+            <p>Assassinos da Lua das Flores</p><br>
+            <p>Avaliação: 4.5/5.0 (96%)</p>
+          </div>
+          <div class="card">
+            <img src="./imagens/Duna .jpg" alt="" />
+            <p>Duna: Parte Dois</p><br>
+            <p>Avaliação: 4.5/5.0 (96%)</p>
+          </div>
+          <div class="card">
+            <img src="./imagens/Godzilla.jpeg" alt="" />
+            <p>Godzilla</p><br>
+            <p>Avaliação: 4.5/5.0 (96%)</p>
+          </div>
+          <div class="card">
+            <img src="./imagens/oppenHeimer.webp" alt="" />
+            <p>OppenHeimer</p><br>
+            <p>Avaliação: 4.5/5.0 (90%)</p>
+          </div>
+          <div class="card">
+            <img src="./imagens/pobreCriaturas.jpeg" alt="" />
+            <p>Pobres Criaturas</p><br>
+            <p>Avaliação: 4.5/5.0 (88%)</p>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="tituloCadastro">Cadastre sua conta e classifique seus filmes !</h2>
+
+    </main>
+
+    <dialog id="criarConta">
+      <form id="formCadastro">
+        <h2>Criar conta</h2>
+        <label for="nmCompleto"> Nome Completo:</label><br>
+        <input type="text" name="nmCompleto" id="nmCompleto" required/><br/>
+        <label for="emailCadastro"> Email: </label><br>
+        <input
+          type="text"
+          name="emailCadastro"
+          id="emailCadastro"
+          required
+        /><br/>
+        <label for="dtNascimento">Data de Nascimento:</label><br>
+        <input type="date" name="dtNascimento" id="dtNascimento" required/><br>
+        <label for="telefone">Telefone:</label><br>
+        <input
+          type="number"
+          name="telefone"
+          id="telefone"
+          placeholder="(99) 99999-9999"
+          required
+        /><br>
+        <label for="senhaCadastro"> Senha:</label><br>
+        <input
+          type="password"
+          name="senhaCadastro"
+          id="senhaCadastro"
+          required
+        /><br/>
+
+        <button type="button" id="btnFechar">Sair</button>
+        <button type="submit">Cadastrar</button><br>
+      </form>
+    </dialog>
+
+    <dialog id="login">
+      <form id="formLogin">
+        <h2>Login</h2>
+        <label for="emailLogin"> E-mail:</label>
+        <input type="text" name="emailLogin" id="emailLogin" /><br />
+        <label for="senhaLogin"> Senha: </label>
+        <input type="password" name="senhaLogin" id="senhaLogin" /><br />
+        <button type="button" id="fecharLogin">Sair</button>
+        <button type="submit">Entrar</button>
+      </form>
+    </dialog>
+    <footer>
+      <p>Site criado por <a href="https://www.linkedin.com/in/aline-matoso-0b919326a/" target="_blank" rel="noopener noreferrer">Aline</a> e <a href="https://www.linkedin.com/in/eduardo-moraes-81286b262/" target="_blank">Eduardo.</a></p>
+    </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
+
+<!--
+
+NOMES: Aline Matoso de Lima // Eduardo de Araujo Felix de Moraes
+RGM: Aline 38034697 // Eduardo 38501945
+
+-->

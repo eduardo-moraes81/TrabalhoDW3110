@@ -1,0 +1,124 @@
+:root {
+    --cor0: #f9e8df;
+    --cor1: #cfab98;
+    --cor2: #a5765d;
+    --cor3: #7a4b31;
+    --cor4: #502813;
+    --cor5: #331403;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  header {
+    background-color: var(--cor4);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed;
+  }
+  
+  body {
+    background: var(--cor5);
+    background-repeat: no-repeat;
+  }
+  ul {
+    list-style-type: none;
+  }
+  .nav-bar ul {
+    display: flex;
+  }
+  
+  .nav-bar li {
+    padding: 0 12px;
+  }
+  
+  .nav-bar li a {
+    color: var(--cor1);
+    font-size: 18px;
+    font-weight: bold;
+    transition: ease-in 0.15s;
+  }
+  
+  .nav-bar li a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: ease-out 0.15s;
+    border-radius: 4px;
+    padding: 6px 0.5px;
+  }
+  
+  h2,
+  label {
+    color: white;
+  }
+  
+  .listUsuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    height: 800px;
+    border-radius: 12px;
+    box-shadow: rgba(255, 255, 255, 0.4);
+  }
+  
+  .listUsuario button {
+    background-color: var(--cor4);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 20px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
+  }
+  
+  .listUsuario button:hover {
+    background-color: var(--cor3);
+    cursor: pointer;
+  }
+  
+  .formUsuario {
+    background-color: var(--cor2);
+    width: 400px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 0px 75px;
+  }
+  
+  .listUsuario h2,
+  label {
+    padding: 4px;
+  }
+  
+  .tituloTabela {
+    margin: 20px;
+  }
+  
+  th {
+    background-color: var(--cor3);
+  }
+  
+  table {
+    background-color: var(--cor2);
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th,
+  table td {
+    color: white;
+    border: 1px solid var(--cor4);
+    padding: 8px;
+    text-align: center;
+  }
+  

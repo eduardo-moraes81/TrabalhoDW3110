@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Monte sua MovieList</title>
+   <link rel="stylesheet" href="styleForm.css" />
+</head>
+<body>
+   <header class="header">
+    <a href="../index.html"><img src="../imagens/CineMetre250Atualizado.png" alt="logoCinéMetré"/>
+       <nav class="nav-bar">
+         <ul>
+          <li><a href="#" id="logout">Sair</a></li>
+         </ul>
+       </nav>
+     </header>
+   <section class="sessaoMovie-1">
+       <form class="formMovie">
+           <h2>Classifique Seus Filmes</h2>
+           <label for="filme">Filme: </label>
+           <input type="text" name="filme" id="filme" required> <br><br>
+           <label for="classificacao">Classifique: </label>
+           <input type="number" name="classificacao" id="classificacao" min="1" max="5" required><br><br>
+           <button type="submit" class="botaoClassificacao">Salvar</button><br><br>
+       </form>
+
+
+       <table id="tabelaDeFilmes">
+           <h2 class="tituloTabela">MovieList!</h2>
+           <thead class="listaMovie">
+               <tr>
+                   <th class="colunaFilme">Filme</th>
+                   <th class="colunaClassificacao">Classificação</th>
+                   <th class="colunaEditar">Editar</th>
+                   <th class="colunaExcluir">Excluir</th>
+               </tr>
+           </thead>
+           <tbody>
+           </tbody>
+       </table>
+   </section>
+
+   <section class="classStreaming">
+    <form class="formStreaming">
+      <h2>Quais Streamings você mais usa?</h2>
+      <label for="streaming">Streaming: </label>
+      <input type="text" name="streaming" id="streaming" required> <br><br>
+      <button type="submit" class="botaoStreaming">Salvar</button><br><br>
+    </form>
+    <table id="tabelaDeStreamings">
+      <h2 class="tituloTabela">Streamings!</h2>
+      <thead>
+        <tr>
+          <th class="colunaStreaming">Streaming</th>
+          <th class="colunaDeletar">Excluir</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </section>
+   <script src="scriptform.js"></script>
+</body>
+</html>

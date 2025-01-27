@@ -1,29 +1,248 @@
 @charset "UTF-8";
 
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --cor0: #f9e8df;
+  --cor1: #cfab98;
+  --cor2: #a5765d;
+  --cor3: #7a4b31;
+  --cor4: #502813;
+  --cor5: #331403;
+}
+
 * {
-    padding: 0px;
-    margin: 0px;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+header {
+  background-color: var(--cor4);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
 }
 
-header{
-    background-color: #65E0B0;
-    height: 40px;
-    text-align: ;
+#mensagemBoasVindas{
+  color: var(--cor1);
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: right;
 }
 
-a {
-    color: #65BFE0;
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
-    border-radius: 2px;
-    margin: 1px;
-    padding: 4px;
-    width: 100%;
-    height: 1px;
+body {
+  background: var(--cor5);
+  background-repeat: no-repeat;
+}
+ul {
+  list-style-type: none;
+}
+.nav-bar ul {
+  display: flex;
+}
+.nav-bar li {
+  padding: 0 12px;
 }
 
-a:hover {
-    background-color: white;
-    transition: .3s;
+.nav-bar li a {
+  color: var(--cor1);
+  font-size: 18px;
+  font-weight: bold;
+  transition: ease-in 0.15s;
+}
+
+.nav-bar li a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: ease-out 0.15s;
+  border-radius: 4px;
+  padding: 6px 0;
+}
+
+h3 {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+.section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.section-1 h3 {
+  padding: 1rem 0;
+}
+
+#login,
+#criarConta {
+  left: 50%;
+  top: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  );
+}
+
+dialog {
+  background-color: var(--cor4);
+  width: 40%;
+  min-width: 300px;
+  padding: 20px;
+  padding-top: 10px;
+  border: 0px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+dialog button{ margin-top: 20px;}
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+dialog p.erro{
+  padding: 10px;
+  background-color: rgb(255, 190, 190);
+  color: rgb(86, 2, 2);
+  text-align: center;
+}
+
+#login h2 {
+  padding: 8px 0px;
+}
+
+#criarConta {
+  width: 20%;
+}
+
+#formCadastro h2,
+label {
+  color: white;
+}
+
+#formLogin h2 {
+  color: white;
+}
+
+input,
+select,
+textarea {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+button {
+  background-color: var(--cor2);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--cor3);
+}
+
+button[type="button"] {
+  color: white;
+  background-color: var(--cor2);
+}
+button[type="button"]:hover {
+  background-color: var(--cor3);
+}
+
+dialog button {
+  margin-top: 20px;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.section-2 {
+  padding: 0px 10%;
+}
+
+.section-2 h2 {
+  color: white;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.card {
+  border: solid 1px;
+  max-width: 250px;
+  text-align: center;
+  padding: 1rem 1rem;
+  background-color: var(--cor3);
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  height: 300px;
+  border-radius: 10px;
+}
+
+.card p {
+  font-weight: bold;
+  color: white;
+}
+
+.cards-wrapper {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 1rem 0;
+  gap: 20px;
+}
+
+.tituloCadastro {
+  color: white;
+  text-align: center;
+  margin: 50px;
+}
+
+footer {
+  background-color: var(--cor4);
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 5px;
+  width: 100%;
+}
+
+footer > p > a {
+  color: var(--cor1);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer > p > a:hover {
+  background-color: var(--cor0);
+  padding: 2px;
+  border-radius: 2px;
+  text-decoration: underline;
 }
